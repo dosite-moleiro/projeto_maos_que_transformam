@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulário de cadastro de voluntários da ONG Mãos que Transformam.">
+
+    <title>Mãos que Transformam | Cadastro</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-inner">
+
+            <h1>Mãos que Transformam</h1>
+            <p>Solidariedade que vira oportunidade.</p>
+
+            <nav aria-label="Navegação principal">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="cadastro.html">Seja voluntário</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>Cadastro de voluntários</h2>
+
+            <p>
+                Preencha seus dados para demonstrar interesse em participar
+                das ações da ONG.
+            </p>
+
+            <form id="cadastro-form" action="#" method="post">
+
+                <fieldset>
+                    <legend>Dados pessoais</legend>
+
+                    <div class="form-group">
+                        <label for="nome">Nome completo</label>
+                        <input type="text" id="nome" name="nome"
+                               required minlength="3" autocomplete="name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email"
+                               required autocomplete="email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nascimento">Data de nascimento</label>
+                        <input type="date" id="nascimento" name="nascimento"
+                               required autocomplete="bday">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cpf">CPF</label>
+                        <input type="text" id="cpf" name="cpf"
+                               inputmode="numeric"
+                               pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}"
+                               placeholder="000.000.000-00"
+                               maxlength="14"
+                               required
+                               title="Digite o CPF no formato 000.000.000-00">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" id="telefone" name="telefone"
+                               inputmode="tel"
+                               pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}"
+                               placeholder="(00) 00000-0000"
+                               maxlength="15"
+                               required
+                               autocomplete="tel"
+                               title="Digite o telefone no formato (00) 00000-0000">
+                    </div>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Endereço</legend>
+
+                    <div class="form-group">
+                        <label for="endereco">Endereço</label>
+                        <input type="text" id="endereco" name="endereco"
+                               required autocomplete="street-address">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cidade">Cidade</label>
+                        <input type="text" id="cidade" name="cidade"
+                               required autocomplete="address-level2">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="estado">Estado</label>
+
+                        <select id="estado" name="estado"
+                                required autocomplete="address-level1">
+
+                            <option value="">Selecione</option>
+                            <option>AC</option>
+                            <option>AL</option>
+                            <option>AP</option>
+                            <option>AM</option>
+                            <option>BA</option>
+                            <option>CE</option>
+                            <option>DF</option>
+                            <option>ES</option>
+                            <option>GO</option>
+                            <option>MA</option>
+                            <option>MT</option>
+                            <option>MS</option>
+                            <option>MG</option>
+                            <option>PA</option>
+                            <option>PB</option>
+                            <option>PR</option>
+                            <option>PE</option>
+                            <option>PI</option>
+                            <option>RJ</option>
+                            <option>RN</option>
+                            <option>RS</option>
+                            <option>RO</option>
+                            <option>RR</option>
+                            <option>SC</option>
+                            <option>SP</option>
+                            <option>SE</option>
+                            <option>TO</option>
+
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cep">CEP</label>
+                        <input type="text" id="cep" name="cep"
+                               inputmode="numeric"
+                               pattern="[0-9]{5}-[0-9]{3}"
+                               placeholder="00000-000"
+                               maxlength="9"
+                               required
+                               autocomplete="postal-code"
+                               title="Digite o CEP no formato 00000-000">
+                    </div>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Interesse em voluntariado</legend>
+
+                    <div class="form-group">
+                        <label for="area">Área de interesse</label>
+
+                        <select id="area" name="area" required>
+                            <option value="">Selecione</option>
+                            <option>Educação</option>
+                            <option>Arrecadação e doação</option>
+                            <option>Eventos</option>
+                            <option>Comunicação</option>
+                            <option>Outras atividades</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensagem-cadastro">
+                            Conte um pouco sobre como gostaria de ajudar
+                        </label>
+
+                        <textarea id="mensagem-cadastro"
+                                  name="mensagem"
+                                  minlength="10"
+                                  required></textarea>
+                    </div>
+
+                </fieldset>
+
+                <button type="submit">Enviar cadastro</button>
+
+                <p id="mensagem-formulario" aria-live="polite"></p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <p>&copy; 2026 Mãos que Transformam. Projeto acadêmico de HTML5.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
